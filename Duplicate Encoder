@@ -1,0 +1,50 @@
+def Duplicate_Encoder(word):
+    list_A = list_B = list(word)
+    check_list = []
+    result = []
+    n = len(list_A)
+    
+    
+    
+    for j in range(n):
+        check_list.clear()
+        
+        for i in range(n):
+            
+            
+            if j == i:
+                check_list.insert(i,'Pass')
+                pass
+            
+            elif list_A[j].upper() == list_B[i].upper():
+                check_list.insert(i,'Duplicate')
+            
+            else:
+                check_list.insert(i,'Only')
+            
+        
+        
+        
+            
+        if 'Duplicate' in check_list:
+            
+    
+            result.append(')')
+
+                
+                
+        else:
+                
+            result.append('(')
+            
+
+
+                
+                
+    return ''.join(result)
+    
+    #######################
+    
+    
+    def duplicate_encode(word):
+    return "".join(["(" if word.lower().count(c) == 1 else ")" for c in word.lower()])
